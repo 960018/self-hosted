@@ -466,6 +466,8 @@ services:
   relay:
     <<: *restart_policy
     image: "$RELAY_IMAGE"
+    ports:
+      - 2052:3000
     volumes:
       - type: bind
         read_only: true
